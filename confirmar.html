@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Presença - Helena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-background-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="Vídeo_de_Jardim_Encantado_Criado.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="main-content-wrapper" style="padding-top: 100px;">
+        
+        <a href="index.html" style="text-decoration: none; color: var(--white); font-weight: bold; display: block; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">← Voltar ao convite</a>
+
+        <div class="card-box">
+            <span class="icon-borboleta">💌</span>
+            <h2 class="section-title">Confirmar Presença</h2>
+            <p class="intro-text">Ajude a mamãe a organizar tudo preenchendo com carinho.</p>
+
+            <div id="msg-expirado" class="hidden alert-box">
+                O prazo para confirmação já passou!
+            </div>
+
+            <form id="form-convite" style="margin-top: 30px;">
+                
+                <div class="input-wrapper">
+                    <label>Seu Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Ex: Tia Sofia" required>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Você poderá ir?</label>
+                    <select id="status" required>
+                        <option value="">Selecione...</option>
+                        <option value="sim">Sim, com certeza!</option>
+                        <option value="nao">Infelizmente não poderei ir</option>
+                    </select>
+                </div>
+
+                <div id="detalhes-extras" class="hidden">
+                    
+                    <div class="dynamic-box">
+                        <div class="input-wrapper">
+                            <label>Total de Adultos (contando com você)</label>
+                            <select id="adultos">
+                                <option value="1">1 Adulto (Só eu)</option>
+                                <option value="2">2 Adultos</option>
+                                <option value="3">3 Adultos</option>
+                                <option value="4">4 Adultos</option>
+                                <option value="5">5 Adultos</option>
+                            </select>
+                        </div>
+                        <div id="container-adultos"></div>
+                    </div>
+
+                    <div class="dynamic-box">
+                        <div class="input-wrapper">
+                            <label>Quantas Crianças irão?</label>
+                            <select id="criancas">
+                                <option value="0">Nenhuma criança</option>
+                                <option value="1">1 Criança</option>
+                                <option value="2">2 Crianças</option>
+                                <option value="3">3 Crianças</option>
+                                <option value="4">4 Crianças</option>
+                            </select>
+                        </div>
+                        <div id="container-criancas"></div>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="btn-enviar" class="btn-jardim" style="margin-top: 20px;">
+                    Enviar Confirmação
+                </button>
+
+            </form>
+
+            <div id="rsvp-section"></div>
+        </div>
+    </div>
+
+    <footer class="footer-jardim">
+        <p>Feito com carinho por Samyra Santiago 🦋</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
