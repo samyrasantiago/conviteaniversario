@@ -1,12 +1,9 @@
-// --- CONFIGURAÇÕES ---
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwEREv8esvovTv6Q5fgGoTYtVpLkYaoGe529dnqxXN3kvToXSPy77DrSugJGsaUrqh0_A/exec";
 
-// --- ELEMENTOS DO MURAL DE RECADOS ---
 const formRecado = document.getElementById('form-recado');
 const listaRecados = document.getElementById('lista-recados');
 const btnPostar = document.getElementById('btn-postar');
 
-// 1. Função para buscar recados (GET)
 async function carregarRecados() {
     if(!listaRecados) return;
 
@@ -33,11 +30,10 @@ async function carregarRecados() {
     }
 }
 
-// 2. Cria o visual do recado
 function criarElementoRecado(nome, msg) {
     const div = document.createElement('div');
-    div.className = 'recado-postado'; // Usa a classe do CSS novo
-    // Estilos inline de backup caso o CSS falhe
+    div.className = 'recado-postado'; 
+   
     div.style.background = "#fffbf5";
     div.style.borderLeft = "4px solid #FF69B4";
     div.style.padding = "15px";
@@ -52,7 +48,7 @@ function criarElementoRecado(nome, msg) {
     listaRecados.appendChild(div);
 }
 
-// 3. Enviar novo recado (POST)
+
 if(formRecado) {
     formRecado.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -101,5 +97,6 @@ if(formRecado) {
         });
     });
 }
+
 
 carregarRecados();
