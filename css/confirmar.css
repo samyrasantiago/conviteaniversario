@@ -1,4 +1,3 @@
-/* --- FORMULÁRIO DE PRESENÇA --- */
 .input-wrapper { margin-bottom: 20px; text-align: left; }
 
 label { display: block; font-weight: 700; margin-bottom: 8px; color: #C71585; }
@@ -29,4 +28,5 @@ input[type="text"]:focus, select:focus {
 @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
 .titulo-dinamico { font-weight: bold; color: #C71585; margin: 15px 0 10px; font-size: 0.9rem; }
+
 .wrapper-crianca { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; margin-bottom: 10px; }
