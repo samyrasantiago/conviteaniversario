@@ -1,0 +1,32 @@
+/* --- FORMULÁRIO DE PRESENÇA --- */
+.input-wrapper { margin-bottom: 20px; text-align: left; }
+
+label { display: block; font-weight: 700; margin-bottom: 8px; color: #C71585; }
+
+input[type="text"], select {
+    width: 100%; padding: 14px;
+    border: 2px solid #FFADD6;
+    border-radius: 15px;
+    font-family: 'Nunito', sans-serif; font-size: 1rem;
+    background: #fffafc; outline: none; transition: 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #FF69B4;
+    box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.1);
+}
+
+.dynamic-box {
+    background: #fff0f7;
+    border: 2px dashed #FFADD6;
+    padding: 20px; border-radius: 15px; margin-bottom: 20px;
+    animation: fadeIn 0.4s ease; text-align: left;
+}
+
+.hidden { display: none; }
+.alert-box { padding: 15px; background: #fff0f0; color: #d63031; border-radius: 10px; margin-bottom: 20px; font-weight: bold; border: 2px solid #ffcccc; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+.titulo-dinamico { font-weight: bold; color: #C71585; margin: 15px 0 10px; font-size: 0.9rem; }
+.wrapper-crianca { display: grid; grid-template-columns: 2fr 1fr; gap: 10px; margin-bottom: 10px; }

@@ -1,0 +1,108 @@
+/* --- VARIÁVEIS GLOBAIS (CORES) --- */
+:root {
+    --primary: #FF69B4;       /* Pink vibrante */
+    --primary-light: #FFADD6; /* Rosa claro */
+    --primary-dark: #C71585;  /* Pink escuro */
+    --secondary: #64B87B;     /* Verde Jardim */
+    --bg-body: #FFF9FC;       /* Fundo rosado */
+    --white: #ffffff;
+    --text-color: #5A5A5A;    /* Cinza escuro */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- VÍDEO DE FUNDO --- */
+.video-background-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; overflow: hidden;
+}
+.hero-video { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+.video-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 166, 201, 0.3), var(--bg-body));
+}
+
+/* --- ESTRUTURA --- */
+.main-content-wrapper {
+    max-width: 550px; margin: 0 auto; padding: 20px;
+    padding-top: 100px; position: relative; z-index: 10;
+}
+.card-box {
+    background: var(--white); border-radius: 30px; padding: 30px;
+    margin-bottom: 25px; box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);
+    text-align: center; border: 3px solid #fff;
+}
+.card-glass {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #fff;
+}
+
+/* --- TIPOGRAFIA --- */
+h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
+    font-family: 'Dancing Script', cursive; color: var(--primary-dark);
+}
+.header-text { text-align: center; margin-bottom: 40px; }
+.titulo-principal { font-size: 4rem; line-height: 1; margin: 0; }
+.subtitulo-principal { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+
+/* Classes de Texto Úteis */
+.text-pink-dark { color: var(--primary-dark); font-weight: bold; }
+.text-gray { color: #666; }
+.mt-10 { margin-top: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-25 { margin-bottom: 25px; }
+.font-big { font-size: 1.3rem; }
+.font-giant { font-size: 2rem; }
+
+.divider-dashed {
+    border: 0; border-top: 1px dashed var(--primary-light);
+    margin: 20px 20%; opacity: 0.5;
+}
+
+/* --- BOTÕES --- */
+.btn-jardim {
+    display: inline-block; width: 100%; padding: 16px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white; border: none; border-radius: 50px;
+    font-size: 1.2rem; font-weight: bold; text-decoration: none;
+    cursor: pointer; box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    transition: transform 0.2s;
+}
+.btn-jardim:hover { transform: translateY(-3px); }
+
+.btn-outline-verde {
+    background: white; color: var(--secondary); border: 2px solid var(--secondary); margin-top: 15px;
+}
+.btn-outline-verde:hover { background: var(--secondary); color: white; }
+
+.btn-outline-marrom {
+    background: white; color: #8B4513; border: 2px solid #8B4513;
+}
+.btn-outline-marrom:hover { background: #8B4513; color: white; }
+
+/* --- RODAPÉ --- */
+.footer-jardim {
+    text-align: center;
+    padding: 20px;
+    color: #C71585; /* Rosa Escuro (igual aos títulos) */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* Sombra branca pra ler em cima do vídeo */
+}
+
+/* --- MURAL DE RECADOS (Inputs) --- */
+.input-recado {
+    width: 100%; padding: 10px;
+    border: 1px solid #ddd; border-radius: 8px;
+    font-family: 'Nunito', sans-serif; outline: none;
+}
+.input-recado:focus { border-color: #a67c52; }
+.lista-recados-container { margin-top: 30px; text-align: left; }

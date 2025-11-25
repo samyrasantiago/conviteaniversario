@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões de Presente - Helena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sugestao.css">
+</head>
+<body>
+
+    <div id="meuModal" class="zoom-modal" onclick="fecharZoom()">
+        <img id="imgNoModal" src="" alt="Zoom">
+    </div>
+
+    <div class="video-background-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/video/Vídeo_de_Jardim_Encantado_Criado.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="main-content-wrapper" style="padding-top: 100px;">
+        
+        <a href="index.html" style="text-decoration: none; color: #fff; font-weight: bold; display: block; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">← Voltar ao convite</a>
+
+        <div class="card-box">
+            <span class="icon-borboleta">🎁✨</span>
+            <h2 class="section-title">Galeria de Sugestões</h2>
+            <p class="intro-text">Separamos algumas ideias com carinho para ajudar na escolha:</p>
+            
+            <div class="aviso-tamanhos">
+                <p><strong>Tamanhos Ideais:</strong></p>
+                <p>👟 Calçado: 20  |  👗 Roupa: 2 Anos</p>
+            </div>
+            
+            <hr class="divider-rosa">
+
+            <h3 class="categoria-titulo">👗 Roupas e Calçados</h3>
+            
+            <div class="catalogo-grid">
+                <div class="catalogo-item">
+                    <img src="assets/imagem/vestido.jpeg" onclick="abrirZoom(this)" alt="Vestido Cereja">
+                    <p class="item-legenda">Vestido Cerejinhas</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/conjunto.jpeg" onclick="abrirZoom(this)" alt="Conjunto Ursinho">
+                    <p class="item-legenda">Conjunto Ursinho</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/conju_florido.jpeg" onclick="abrirZoom(this)" alt="Conjunto Florido">
+                    <p class="item-legenda">Conjunto Florido</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/conjunto_infantil.jpeg" onclick="abrirZoom(this)" alt="Conjunto Verde">
+                    <p class="item-legenda">Conjunto Verde</p>
+                </div>
+                 <div class="catalogo-item">
+                    <img src="assets/imagem/conju_infantil.jpeg" onclick="abrirZoom(this)" alt="Conjunto Saia">
+                    <p class="item-legenda">Conjunto Saia</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/roupinha.jpeg" onclick="abrirZoom(this)" alt="Roupinha">
+                    <p class="item-legenda">Roupa Branca</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/roupa_infantil.jpeg" onclick="abrirZoom(this)" alt="Roupa Jeans">
+                    <p class="item-legenda">Roupa Jeans</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/bota.jpeg" onclick="abrirZoom(this)" alt="Botinha">
+                    <p class="item-legenda">Botinha Rosa</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/sapato.jpeg" onclick="abrirZoom(this)" alt="Sapato Verde">
+                    <p class="item-legenda">Sandália Verde</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/sapato_infantil.jpeg" onclick="abrirZoom(this)" alt="Sapato Rosa">
+                    <p class="item-legenda">Sandália Rosa</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/sapatilha.jpeg" onclick="abrirZoom(this)" alt="Sapatilha">
+                    <p class="item-legenda">Sapatilha Branca</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/tenis.jpeg" onclick="abrirZoom(this)" alt="Tênis">
+                    <p class="item-legenda">Tênis com Luz</p>
+                </div>
+            </div>
+            
+            <br><hr class="divider-rosa"><br>
+
+            <h3 class="categoria-titulo">🧸 Brinquedos e Diversão</h3>
+
+            <div class="catalogo-grid">
+                <div class="catalogo-item">
+                    <img src="assets/imagem/bicicleta.jpeg" onclick="abrirZoom(this)" alt="Bicicleta">
+                    <p class="item-legenda">Bicicleta Equilíbrio</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/carrinho_compras.jpeg" onclick="abrirZoom(this)" alt="Carrinho">
+                    <p class="item-legenda">Carrinho de Compras</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/brinn.jpeg" onclick="abrirZoom(this)" alt="Mesa Atividades">
+                    <p class="item-legenda">Mesa de Atividades</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/brinq.jpeg" onclick="abrirZoom(this)" alt="Andador Moto">
+                    <p class="item-legenda">Andador Motoquinha</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/carro.jpeg" onclick="abrirZoom(this)" alt="Jipe Roxo">
+                    <p class="item-legenda">Jipe de Passeio</p>
+                </div>
+                 <div class="catalogo-item">
+                    <img src="assets/imagem/carro_controle.jpeg" onclick="abrirZoom(this)" alt="Carro Controle">
+                    <p class="item-legenda">Carro Controle Remoto</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/brinqu.jpeg" onclick="abrirZoom(this)" alt="Andador Didático">
+                    <p class="item-legenda">Andador Didático</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/brinque.jpeg" onclick="abrirZoom(this)" alt="Mesa Musical">
+                    <p class="item-legenda">Mesa Musical</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/teclado.jpeg" onclick="abrirZoom(this)" alt="Teclado Musical">
+                    <p class="item-legenda">Teclado Musical</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/caderno_digital.jpeg" onclick="abrirZoom(this)" alt="Lousa Mágica">
+                    <p class="item-legenda">Lousa Mágica</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/casinha_bolinha.jpeg" onclick="abrirZoom(this)" alt="Barraca">
+                    <p class="item-legenda">Barraca Rosa</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/piscina_bolinha.jpeg" onclick="abrirZoom(this)" alt="Piscina Bolinha">
+                    <p class="item-legenda">Piscina de Bolinhas</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/pula_pula.jpeg" onclick="abrirZoom(this)" alt="Pula Pula">
+                    <p class="item-legenda">Pula-Pula</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/cavalo.jpeg" onclick="abrirZoom(this)" alt="Cavalinho">
+                    <p class="item-legenda">Cavalinho Upa Upa</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/mesa_cadeira.jpeg" onclick="abrirZoom(this)" alt="Mesinha">
+                    <p class="item-legenda">Mesinha com Cadeira</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/cubo_educa.jpeg" onclick="abrirZoom(this)" alt="Cubo Didático">
+                    <p class="item-legenda">Cubo Didático</p>
+                </div>
+                <div class="catalogo-item">
+                    <img src="assets/imagem/empilhar.jpeg" onclick="abrirZoom(this)" alt="Torre Empilhar">
+                    <p class="item-legenda">Torre de Empilhar</p>
+                </div>
+                 <div class="catalogo-item">
+                    <img src="assets/imagem/kit_natura.jpeg" onclick="abrirZoom(this)" alt="Kit Beleza">
+                    <p class="item-legenda">Kit de Beleza</p>
+                </div>
+            </div>
+            
+            <br>
+            <p class="intro-text" style="font-size: 0.9rem; margin-top: 30px;">Toque na imagem para ampliar (zoom)</p>
+
+        </div>
+    </div>
+
+    <footer class="footer-jardim">
+        <p>Feito com carinho por Samyra Santiago 🦋</p>
+    </footer>
+
+    <script src="js/sugestao.js"></script>
+</body>
+</html>
