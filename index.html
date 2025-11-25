@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 Aninho da Helena</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="video-background-container">
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="Vídeo_de_Jardim_Encantado_Criado.mp4" type="video/mp4">
+            <source src="assets/video/Vídeo_de_Jardim_Encantado_Criado.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>
@@ -21,54 +22,62 @@
         <div class="header-text">
             <h1 class="titulo-principal">Helena</h1>
             <p class="subtitulo-principal">Vai completar 1 aninho!</p>
-            <p style="color: var(--primary-dark); margin-top: 10px;">🦋 A borboletinha mais linda vai completar seu primeiro aninho e você é o nosso convidado especial para esse jardim encantado! 🦋</p>
+            <p class="text-pink-dark mt-10">🦋 A borboletinha mais linda vai completar seu primeiro aninho e você é o nosso convidado especial para esse jardim encantado! 🦋</p>
         </div>
 
         <div class="card-box">
-            <span class="icon-borboleta">📅📍</span>
             <h2 class="section-title">Data e Local</h2>
-        
-            <p class="info-destaque" style="font-size: 1.3rem;">Domingo, 11 de Janeiro de 2026</p>
+            <p class="text-pink-dark font-big">Domingo, 11 de Janeiro de 2026</p>
             <p>às 16:00 horas</p>
-            
-            <hr style="border: 0; border-top: 1px dashed var(--primary-light); margin: 20px 20%; opacity: 0.5;">
-            
-            <p><strong>Rosi Oliveira Espaço Kids</strong></p>
+            <hr class="divider-dashed">
+            <p><strong>Rosi Oliveira espaço kids</strong></p>
             <p>Santana</p>
-            
-            <a href="https://www.google.com/maps/place/Rosi+Oliveira+espa%C3%A7o+kids/@-20.3092395,-40.3884946,17z/data=!3m1!4b1!4m6!3m5!1s0xb83d9ae6302b19:0x9223b3bfb9026b46!8m2!3d-20.3092395!4d-40.3884946!16s%2Fg%2F11krvwgbfn?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D br" target="_blank" class="btn-mapa">
-                📍 Ver Localização no Mapa
+            <a href="http://google.com/maps/place/Rosi+Oliveira+espa%C3%A7o+kids/@-20.3092395,-40.3884946,17z/data=!3m1!4b1!4m6!3m5!1s0xb83d9ae6302b19:0x9223b3bfb9026b46!8m2!3d-20.3092395!4d-40.3884946!16s%2Fg%2F11krvwgbfn?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" class="btn-jardim">
+                📍 VER LOCALIZAÇÃO
             </a>
         </div>
 
         <div class="card-box">
-            <span class="icon-borboleta">🎁</span>
+            <span class="font-giant">🎁</span>
             <h2 class="section-title">Sugestões de Presente</h2>
-            <p class="intro-text">Sua presença é o principal! Mas se quiser mimar a Helena:</p>
-            
-            <div class="gift-grid">
-                <div class="gift-pill">🧸 Brinquedos de Jardim</div>
-                <div class="gift-pill">👗 Roupinhas Tam. 2</div>
-                <div class="gift-pill">📚 Livros Coloridos</div>
-                <div class="gift-pill">🎀 Laços e Acessórios</div>
-            </div>
+            <p class="text-gray mb-20">Preparamos uma lista com algumas coisinhas que a Helena amaria ganhar.</p>
+            <a href="sugestao.html" class="btn-jardim">
+                VER LISTA DE SUGESTÕES
+            </a>
         </div>
 
-        <div class="card-box" style="background: rgba(255,255,255,0.9);">
+        <div class="card-box card-glass">
             <h2 class="section-title">Venha comemorar!</h2>
-            <p style="margin-bottom: 25px;">É muito importante para nós sabermos se você vem.</p>
-            
+            <p class="mb-25">É muito importante para nós sabermos se você vem.</p>
             <a href="confirmar.html" class="btn-jardim">
                 CONFIRMAR PRESENÇA
             </a>
         </div>
 
+        <div class="card-box" id="area-recados">
+            <h2 class="section-title">Mural de Recados</h2>
+            <p class="text-gray mb-20">Deixe uma mensagem de carinho para a Helena ler no futuro! 🥰</p>
+            <form id="form-recado">
+                <div class="input-wrapper">
+                    <textarea id="mensagem-texto" class="input-recado" placeholder="Escreva seu recado aqui..." rows="3" maxlength="300" required></textarea>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="mensagem-nome" class="input-recado" placeholder="Seu Nome" required>
+                </div>
+                <button type="submit" id="btn-postar" class="btn-jardim btn-outline-marrom">
+                    Postar Recado
+                </button>
+            </form>
+            <div id="lista-recados" class="lista-recados-container"></div>
+        </div>
+
     </div>
 
     <footer class="footer-jardim">
-        <p>Feito com carinho por Samyra Santiago 🍄🌸</p>
+        <p>Feito com carinho por Samyra Santiago 🦋</p>
     </footer>
 
-</body>
+    <script src="js/main.js"></script>
 
+</body>
 </html>
