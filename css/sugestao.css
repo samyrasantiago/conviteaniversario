@@ -1,4 +1,3 @@
-/* --- GALERIA DE SUGESTÕES --- */
 .categoria-titulo {
     text-align: center !important;
     font-size: 2rem; margin: 30px 0 20px 0; display: block; width: 100%;
@@ -35,7 +34,6 @@
     padding: 10px; font-size: 0.9rem; font-weight: bold; color: #555; background: #fffafc;
 }
 
-/* --- MODAL DE ZOOM --- */
 .zoom-modal {
     display: none; position: fixed; z-index: 10000;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -47,5 +45,6 @@
     max-width: 95%; max-height: 90%; border-radius: 10px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2); animation: zoomIn 0.3s ease;
 }
+
 
 @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
