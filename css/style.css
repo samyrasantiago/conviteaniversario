@@ -1,12 +1,11 @@
-/* --- VARIÁVEIS GLOBAIS (CORES) --- */
 :root {
-    --primary: #FF69B4;       /* Pink vibrante */
-    --primary-light: #FFADD6; /* Rosa claro */
-    --primary-dark: #C71585;  /* Pink escuro */
-    --secondary: #64B87B;     /* Verde Jardim */
-    --bg-body: #FFF9FC;       /* Fundo rosado */
+    --primary: #FF69B4;       
+    --primary-light: #FFADD6; 
+    --primary-dark: #C71585;  
+    --secondary: #64B87B;     
+    --bg-body: #FFF9FC;       
     --white: #ffffff;
-    --text-color: #5A5A5A;    /* Cinza escuro */
+    --text-color: #5A5A5A;    
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,7 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- VÍDEO DE FUNDO --- */
 .video-background-container {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1; overflow: hidden;
@@ -30,7 +28,6 @@ body {
     background: linear-gradient(to bottom, rgba(255, 166, 201, 0.3), var(--bg-body));
 }
 
-/* --- ESTRUTURA --- */
 .main-content-wrapper {
     max-width: 550px; margin: 0 auto; padding: 20px;
     padding-top: 100px; position: relative; z-index: 10;
@@ -45,7 +42,6 @@ body {
     border: 3px solid #fff;
 }
 
-/* --- TIPOGRAFIA --- */
 h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
     font-family: 'Dancing Script', cursive; color: var(--primary-dark);
 }
@@ -53,7 +49,6 @@ h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
 .titulo-principal { font-size: 4rem; line-height: 1; margin: 0; }
 .subtitulo-principal { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
 
-/* Classes de Texto Úteis */
 .text-pink-dark { color: var(--primary-dark); font-weight: bold; }
 .text-gray { color: #666; }
 .mt-10 { margin-top: 10px; }
@@ -67,7 +62,6 @@ h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
     margin: 20px 20%; opacity: 0.5;
 }
 
-/* --- BOTÕES --- */
 .btn-jardim {
     display: inline-block; width: 100%; padding: 16px;
     background: linear-gradient(to right, var(--primary), var(--primary-dark));
@@ -88,21 +82,30 @@ h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
 }
 .btn-outline-marrom:hover { background: #8B4513; color: white; }
 
-/* --- RODAPÉ --- */
 .footer-jardim {
     text-align: center;
     padding: 20px;
-    color: #C71585; /* Rosa Escuro (igual aos títulos) */
+    color: #C71585; 
     font-size: 0.9rem;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* Sombra branca pra ler em cima do vídeo */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); 
 }
 
-/* --- MURAL DE RECADOS (Inputs) --- */
 .input-recado {
     width: 100%; padding: 10px;
     border: 1px solid #ddd; border-radius: 8px;
     font-family: 'Nunito', sans-serif; outline: none;
 }
 .input-recado:focus { border-color: #a67c52; }
+
 .lista-recados-container { margin-top: 30px; text-align: left; }
+
+
+.input-wrapper {
+    margin-bottom: 20px; 
+    text-align: left;
+}
+
+#btn-postar {
+    margin-top: 10px; 
+}
