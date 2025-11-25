@@ -1,4 +1,3 @@
-// --- CONFIGURAÇÕES ---
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyqmVMxLdKm2tmiwcjvwbrAT2Qxr3CgFFkbpQfkoJmbLfRkQL7oFuVJMWCaaQ0OF6OkqQ/exec";
 const DATA_LIMITE = new Date(2025, 11, 20); 
 
@@ -9,7 +8,6 @@ const containerAdultos = document.getElementById('container-adultos');
 const selectCriancas = document.getElementById('criancas');
 const containerCriancas = document.getElementById('container-criancas');
 
-// 1. Mostrar/Esconder
 if(selectStatus){
     selectStatus.addEventListener('change', function() {
         if (this.value === 'sim') {
@@ -24,7 +22,6 @@ if(selectStatus){
     });
 }
 
-// 2. Adultos Extras
 if(selectAdultos){
     selectAdultos.addEventListener('change', function() {
         const qtd = parseInt(this.value);
@@ -48,7 +45,7 @@ if(selectAdultos){
     });
 }
 
-// 3. Crianças
+
 if(selectCriancas){
     selectCriancas.addEventListener('change', function() {
         const qtd = parseInt(this.value);
@@ -79,7 +76,6 @@ if(selectCriancas){
     });
 }
 
-// 4. Enviar com Correção do Título
 const form = document.getElementById('form-convite');
 if(form){
     form.addEventListener('submit', function(e) {
@@ -87,7 +83,6 @@ if(form){
         const btn = document.getElementById('btn-enviar');
         const vaiNaFesta = document.getElementById('status').value === 'sim';
         
-        // Coletas...
         let nomesAdultos = "Nenhum";
         const inAdultos = document.querySelectorAll('.input-adulto-extra');
         if(inAdultos.length > 0) nomesAdultos = Array.from(inAdultos).map(i => i.value).join(', ');
@@ -135,10 +130,8 @@ if(form){
                     <p style="font-size: 1.1rem; margin-top: 10px;">${corpoMsg}</p>
                 </div>`;
             
-            // --- A CORREÇÃO ESTÁ AQUI ---
-            form.style.display = 'none'; // Esconde o formulário
+            form.style.display = 'none'; 
             
-            // Procura o título H2 e esconde ele também
             const tituloPagina = document.querySelector('.section-title'); 
             if(tituloPagina) tituloPagina.style.display = 'none'; 
 
@@ -148,10 +141,10 @@ if(form){
     });
 }
 
-// Verifica prazo
 const hoje = new Date();
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('lote') !== '2' && hoje > DATA_LIMITE) {
     if(form) form.classList.add('hidden');
     document.getElementById('msg-expirado')?.classList.remove('hidden');
+
 }
