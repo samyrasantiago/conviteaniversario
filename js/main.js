@@ -98,5 +98,37 @@ if(formRecado) {
     });
 }
 
+// --- CONTROLE DE MÚSICA ---
+const audio = document.getElementById('musica-fundo');
+const btnMusica = document.getElementById('btn-musica');
+let estaTocando = false;
+
+function toggleMusica() {
+    if (estaTocando) {
+        audio.pause();
+        btnMusica.innerHTML = "🎵"; // Ícone de nota musical
+        btnMusica.classList.remove('tocando');
+    } else {
+        audio.play().catch(error => {
+            console.log("O navegador bloqueou o áudio automático:", error);
+        });
+        btnMusica.innerHTML = "⏸️"; // Ícone de pause
+        btnMusica.classList.add('tocando');
+    }
+    estaTocando = !estaTocando;
+}
+
+// Tentativa de Autoplay Inteligente
+// (Tenta tocar assim que a pessoa clicar em qualquer lugar da tela pela primeira vez)
+window.addEventListener('click', function() {
+    if (!estaTocando) {
+        audio.play().then(() => {
+            estaTocando = true;
+            btnMusica.innerHTML = "⏸️";
+            btnMusica.classList.add('tocando');
+        }).catch(() => {}); // Se falhar, espera o usuário clicar no botão
+    }
+}, { once: true });
+
 
 carregarRecados();

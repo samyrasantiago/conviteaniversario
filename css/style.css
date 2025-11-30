@@ -47,7 +47,7 @@ h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
 }
 .header-text { text-align: center; margin-bottom: 40px; }
 .titulo-principal { font-size: 4rem; line-height: 1; margin: 0; }
-.subtitulo-principal { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+.subtitulo-principal { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color: rgb(209, 0, 164); text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
 
 .text-pink-dark { color: var(--primary-dark); font-weight: bold; }
 .text-gray { color: #666; }
@@ -108,4 +108,49 @@ h1, h2, h3, .titulo-principal, .categoria-titulo, .section-title {
 
 #btn-postar {
     margin-top: 10px; 
+}
+
+/* --- BOTÃO DE MÚSICA FLUTUANTE --- */
+.botao-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Canto direito inferior */
+    z-index: 10000; /* Fica por cima de tudo */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #FF69B4; /* Borda Rosa */
+    border-radius: 50%; /* Redondo */
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: pulso 2s infinite; /* Efeito pulsando */
+}
+
+.botao-musica:hover {
+    transform: scale(1.1);
+    background-color: #FFF0F5;
+}
+
+/* Classe para quando estiver tocando (fica rosa) */
+.tocando {
+    background-color: #FF69B4;
+    color: white;
+    border-color: white;
+    animation: girar 3s linear infinite; /* Gira quando toca */
+}
+
+@keyframes pulso {
+    0% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 105, 180, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0); }
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
