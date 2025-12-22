@@ -1,5 +1,5 @@
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyqmVMxLdKm2tmiwcjvwbrAT2Qxr3CgFFkbpQfkoJmbLfRkQL7oFuVJMWCaaQ0OF6OkqQ/exec";
-const DATA_LIMITE = new Date(2026, 0, 5); 
+const DATA_LIMITE = new Date(2026, 0, 1); 
 
 const selectStatus = document.getElementById('status');
 const divDetalhes = document.getElementById('detalhes-extras');
@@ -148,4 +148,5 @@ if (urlParams.get('lote') !== '2' && hoje > DATA_LIMITE) {
     document.getElementById('msg-expirado')?.classList.remove('hidden');
 
 }
+
 
